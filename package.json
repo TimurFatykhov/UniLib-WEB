@@ -1,0 +1,12 @@
+{
+    "devDependencies": {
+        "express": "*",
+        "lokijs": "*",
+        "body-parser": "*",
+        "express-session": "*",
+        "cookie-parser": "*",
+        "passport": "*",
+        "passport-local": "*",
+        "bcryptjs": "*"
+    }
+}

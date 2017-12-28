@@ -1,0 +1,55 @@
+html(lang="en")
+    head
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        script(src="https://code.jquery.com/jquery-1.10.2.js")
+        script(src="/scripts/verification.js")
+        title= title
+        link(rel="stylesheet", href="/css/body.css")
+        link(rel="stylesheet", href="/css/logIn.css")
+        link(rel="stylesheet", href="/css/beautyModalForm.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Quicksand" )
+    body
+        h1 UniLib
+        div(class="greeting")
+            p1 Hello, I'm your personal librarian
+            br
+            p1 And who are you?
+        if message
+            div.message=message
+        form(action="/logIn", method="post", id='loginForm')
+            label(for="email") Email
+            input(type="text", name = "email", placeholder="Email")
+            label(for="password") Password
+            input(type="password", name="password", placeholder="Password")
+
+            input(type="submit", id="signIn", value="Sign in")
+            input(type="button", id="signUp", value="Sign up")
+        div(class="container")
+            form(action="/addUser", id="signUpForm", method="post", class="modal")
+                label(for="firstName") First name
+                input(type="text", name="firstName", id="firstName", placeholder="First name", required)
+                label(for="lastName") Last name
+                input(type="text", name="lastName", id="lastName", placeholder="Last name", required)
+
+
+                label(for="university") University
+                input(type="text", name="university", id="university", placeholder="University", required)
+                label(for="faculty") Faculty
+                input(type="text", name="faculty", id="faculty", placeholder="Faculty", required)
+
+
+                label(for="phoneNumber") Phone number
+                input(type="text", name="phoneNumber", id="phoneNumber", placeholder="+7 XXX XXX XX XX", required)
+                label(for="email") Email
+                input(type="text", name = "email", id = "email", placeholder="example@gmail.com", required)
+
+
+                label(for="password") Password
+                input(type="password", name="password", id="password", placeholder="Password", required)
+                label(for="repeatedPassword") Repeat, please
+                input(type="password", name="repeatedPassword", id="repeatedPassword", placeholder="Password", required)
+
+                input(type="button", id="signUpButton", value="Submit")
+            div(class="wallpaperDark")

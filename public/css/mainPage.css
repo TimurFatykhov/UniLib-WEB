@@ -1,0 +1,150 @@
+p1
+{
+  color: #296CAF;
+  font-size: 30px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.searchForm
+{
+  margin: 60px auto;
+  margin-bottom: 0px;
+  width: 300px;
+  background: transparent;
+}
+
+input[disabled = "disabled"]
+{
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.43);
+}
+
+/* admin */
+
+input[id="addBook"]
+{
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  color: white;
+  background: #296CAF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.43);
+  text-shadow:0 1px 1px black;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+
+input[id="add"]
+{
+  margin-top: 50px;
+}
+
+input[id="moreAuthors"]
+{
+  height: 30;
+  width: 30;
+  border-radius: 50%;
+}
+
+
+/* user */
+.userBooks
+{
+  border-radius: 15px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  width: 80%;
+  height: auto;
+  top: 230px;
+  left: 10%;
+  background-color: rgba(94, 147, 201, 0.84);
+  position: absolute;
+}
+
+input[id="showListButton"]
+{
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  color: white;
+  background: #296CAF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.43);
+  text-shadow:0 1px 1px black;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+
+caption
+{
+  margin-top: 20px;
+  text-align: left;
+  font-size:30px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
+table
+{
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  width: 60%;
+}
+
+th 
+{
+  padding: 10px;
+  font-weight: 900;
+  background-color: #103A64;
+  color: #ffffff;
+  text-align: left;
+}
+
+th:first-child /* name */
+{
+  width: 30%;
+}
+
+th:nth-child(2) /* author */
+{
+  width: 30%;
+}
+
+th:nth-child(3) /* genre */
+{
+  width: 20%;
+}
+
+th:nth-child(4) /* year */
+{
+  width: 10%;
+}
+
+th:nth-child(5) /* amount */
+{
+  width: 10%;
+}
+
+tr:nth-child(2N) td /* even row */
+{
+  padding: 6px 12px;
+  background-color: #f6f6f6;
+  color: #000000;
+}
+
+tr:nth-child(2N+1) td /* odd row */
+{
+  padding: 6px 12px;
+  background-color: #C2C2C2;
+  color: #000000;
+}
+
+tr td:nth-child(5) /* last column */
+{
+  padding-left: 20px;
+  background-color: transparent;
+}
+
+

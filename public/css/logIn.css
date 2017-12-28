@@ -1,0 +1,33 @@
+h1
+{
+    color: #4AB1FA;
+    text-shadow: 0 5px 5px #0A283C;
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+.greeting
+{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.message
+{
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 70px;
+    color: white;
+    width: 20%;
+    height: 10%;
+    background: rgba(255, 0, 0, 0.43);
+    font-family: 'Quicksand', sans-serif;
+    margin: 10px auto;
+    border-radius: 15px;
+    border-color: red;
+    border-width: 10px;
+}

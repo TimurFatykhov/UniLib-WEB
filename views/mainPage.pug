@@ -1,0 +1,57 @@
+mixin usersBooks(book)
+    tr
+        td=book.name
+        td=book.authors[0]
+        td=book.genre
+        td=book.year
+
+
+html(lang="en")
+    head
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        script(src="https://code.jquery.com/jquery-1.10.2.js")
+        title= title
+        link(rel="stylesheet", href="/css/body.css")
+        link(rel="stylesheet", href="/css/beautyModalForm.css")
+        link(rel="stylesheet", href="/css/mainPage.css")
+        script(src="/scripts/mainPage.js")
+    body
+        p1=user.firstName + ' ' + user.lastName + ' from ' + user.university
+        br
+        - var admin = user.admin
+        if admin != "1"
+            input(type="button", id="showListButton", value="My book list")
+            if true
+                div(class="container")
+                    div(id="userBooks" class="userBooks")
+                    div(class="wallpaperDark")
+        else
+            //- absolute button
+            input(type="button", id="addBook", value="Add new book")
+            //- absolute form for book's adding
+            div(class="container")
+                form(action="/addBook", id="newBookForm", method="POST", class="modal")
+                    label(for="name") Name
+                    input(type="text", id ="name", name="name", placeholder="Name")
+                    label(for="genre") Genre
+                    input(type="text", id="genre", name="genre", placeholder="Genre")
+                    label(for="year") Year
+                    input(type="text", id="year", name="year", placeholder="Year")
+                    label(for="amount") Amount
+                    input(type="text", id="amount",  name="amount", placeholder="Amount")
+                    label(for="id") ID
+                    input(type="text", id="id",  name="id", placeholder="ID")
+
+                    label(for="author1") Author
+                    input(type="text", name="authors", id="author1", placeholder="Name")
+                    
+                    input(type="button", id="moreAuthors", value="+")
+                    input(type="button", id="add", value="Add")
+                div(class="wallpaperDark")
+
+        form(action="/searchBookWeb", class="searchForm", id="searchForm", method="post")
+            input(type="text", id="searchString", name="string")
+            input(type="button", value="Search", id="searchButton")
+        div(id="findedBooks")
